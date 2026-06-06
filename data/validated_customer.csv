@@ -1,1 +1,4 @@
-
+customer_id,name,email,city
+101,Rahul,rahul@gmail.com,Pune
+102,Priya,priya@gmail.com,Mumbai
+104,Neha,neha@gmail.com,Pune
