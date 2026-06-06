@@ -1,0 +1,20 @@
+
+```text
+Raw Data
+   |
+   v
+Data Quality Checks
+   |
+   +--> Null Check
+   |
+   +--> Duplicate Check
+   |
+   +--> Schema Validation
+   |
+   +--> Data Type Validation
+   |
+   v
+Validated Dataset
+   |
+   v
+Reporting Layer
