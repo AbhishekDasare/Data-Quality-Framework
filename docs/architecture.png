@@ -1,20 +1,40 @@
 
-```text
-Raw Data
-   |
-   v
-Data Quality Checks
-   |
-   +--> Null Check
-   |
-   +--> Duplicate Check
-   |
-   +--> Schema Validation
-   |
-   +--> Data Type Validation
-   |
-   v
-Validated Dataset
-   |
-   v
-Reporting Layer
+                    +------------------+
+                    |   Raw Dataset    |
+                    | customer.csv     |
+                    +--------+---------+
+                             |
+                             v
+                +-------------------------+
+                | Data Quality Framework  |
+                +-------------------------+
+                             |
+         +-------------------+-------------------+
+         |                   |                   |
+         v                   v                   v
+
+ +---------------+   +---------------+   +---------------+
+ | Null Check    |   | Duplicate     |   | Schema        |
+ | Validation    |   | Detection     |   | Validation    |
+ +---------------+   +---------------+   +---------------+
+         |                   |                   |
+         +-------------------+-------------------+
+                             |
+                             v
+                +-------------------------+
+                | Data Cleansing Layer    |
+                | Remove Errors           |
+                | Remove Duplicates       |
+                +-------------------------+
+                             |
+                             v
+                +-------------------------+
+                | Validated Dataset       |
+                | validated_customer.csv  |
+                +-------------------------+
+                             |
+                             v
+                +-------------------------+
+                | Analytics / Reporting   |
+                | Dashboards / BI Tools   |
+                +-------------------------+
